@@ -14,7 +14,8 @@ let signupUsername = ref('');
 let signupPassword = ref('');
 let signupPasswordRepeat = ref('');
 
-let badDataWarning = ref('');
+let signupDataWarning = ref('');
+let loginDataWarning = ref('');
 
 async function signup() {
     let data = {
@@ -27,17 +28,33 @@ async function signup() {
     if(!validation.validatePassword( data.password )) badData.push('пароль')
     if(data.password != data.passRepeat) badData.push('повтор пароля')
     if(badData.length > 0) {
-        badDataWarning.value = 'Перепроверьте ' + badData.join(', ');
+        signupDataWarning.value = 'Перепроверьте ' + badData.join(', ');
         return;
     }
-    badDataWarning.value = ''
+    signupDataWarning.value = ''
     const result = await auth.auth.req({
         username: signupUsername.value,
         password: signupPassword.value,
         signup: true,
     })
-    if(result.success === false) badDataWarning.value = 'Такой логин уже занят'
-    else window.location.reload()
+    if(result.success === false) {
+        signupDataWarning.value = 'Такой логин уже занят'
+        return
+    }
+    window.location.reload()
+}
+async function login() {
+    const result = await auth.auth.req({
+        username: loginUsername.value,
+        password: loginPassword.value
+    })
+    
+    if(result.success === false) {
+        loginDataWarning.value = 'Неправильный логин или пароль'
+        return
+    }
+
+    window.location.reload()
 }
 </script>
 <template>
@@ -46,20 +63,21 @@ async function signup() {
             <div class="text-medium">Вход</div>
             <div>
                 <div class="text-small">Юзернейм</div>
-                <input class="frame-9 text-wrapper-2" style="width: 100%;" placeholder="Юзернейм" v-model="loginUsername">
+                <input class="frame-9 text-wrapper-2" style="width: 100%;" placeholder="Юзернейм" v-model="loginUsername" @keyup.enter="login">
             </div>
             <div>
                 <div class="text-small">Пароль</div>
                 <input type="password" class="frame-9 text-wrapper-2" style="width: 100%;" placeholder="Пароль"
-                    v-model="loginPassword">
+                    v-model="loginPassword" @keyup.enter="login">
             </div>
-            <Button1>Войти</Button1>
+            <Button1 @click="login">Войти</Button1>
+            <div style="color: rgb(198, 51, 52)">{{ loginDataWarning }}</div>
         </div>
         <div class="vwrapper">
             <div class="text-medium">Регистрация</div>
             <div>
                 <div class="text-small">Юзернейм</div>
-                <input
+                <input @keyup.enter="signup"
                     :class="'frame-9 text-wrapper-2 ' + (signupUsername == '' || validation.validateLogin(signupUsername) ? '' : 'bad-input')"
                     style="width: 100%;" placeholder="Юзернейм" v-model="signupUsername">
                 <div v-show="signupUsername != ''">
@@ -77,7 +95,7 @@ async function signup() {
             </div>
             <div>
                 <div class="text-small">Пароль</div>
-                <input type="password"
+                <input type="password" @keyup.enter="signup"
                     :class="'frame-9 text-wrapper-2 ' + (signupPassword == '' || validation.validatePassword(signupPassword) ? '' : 'bad-input')"
                     style="width: 100%;" placeholder="Пароль" v-model="signupPassword">
                 <div v-show="signupPassword != ''">
@@ -106,7 +124,7 @@ async function signup() {
             <div>
                 <div class="text-small">Пароль, еще раз</div>
                 <input type="password" class="frame-9 text-wrapper-2" style="width: 100%;" placeholder="Пароль, еще раз"
-                    v-model="signupPasswordRepeat">
+                    v-model="signupPasswordRepeat" @keyup.enter="signup">
                 <div v-show="signupPasswordRepeat != ''">
                     <InputRequirement :input="signupPasswordRepeat" :test="input => input == signupPassword ? 'ok' : 'bad'">
                         Пароли совпадают
@@ -114,7 +132,7 @@ async function signup() {
                 </div>
             </div>
             <Button1 @click="signup">Создать аккаунт</Button1>
-            <div style="color: rgb(198, 51, 52)">{{ badDataWarning }}</div>
+            <div style="color: rgb(198, 51, 52)">{{ signupDataWarning }}</div>
         </div>
     </div>
 </template>
