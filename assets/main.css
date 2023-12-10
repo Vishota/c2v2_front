@@ -58,3 +58,20 @@ input {
 .bad-input {
   border: 1px solid #c63334 !important;
 }
+
+
+textarea {
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+  border: 0.8px solid transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.9);
+  cursor: text;
+  font: 24px Roboto, Helvetica;
+  height: 61.2px;
+  margin: -1px 0 0;
+  outline: none;
+  padding: 15px;
+  resize: none;
+}
