@@ -7,10 +7,10 @@ const courseOwner = await teachers.info.req({ id: courseData.course.owner_user_i
 </script>
 <template>
     <div class="text-big">{{ courseData.course.title }}</div>
-    <div class="text-regular">автор:<u>
+    <div class="text-regular" style=" margin-bottom: 20px; ">автор:<u>
             <To :to="'/teachers/' + courseData.course.owner_user_id">{{ courseOwner.info.name }}</To>
         </u></div>
-    <div class="text-small">{{ courseData.course.about }}</div>
+    <div class="text-small" style="white-space: break-spaces;">{{ courseData.course.about }}</div>
     <div style="font-family: Righteous; display: flex; gap: 10px; align-items: center">
         <div style="font-size: 56px">{{ courseData.course.price }} BYN</div>
         <img src="/promotion.svg?url" style="align-self: stretch; position: relative; max-height: 100%; width: 41px;">

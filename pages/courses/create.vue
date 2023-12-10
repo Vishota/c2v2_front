@@ -19,8 +19,8 @@ async function create() {
     try {
         if (price.value < 0 || !about || !title) throw ''
         const result = await courses.create.req({
-            title: about.value,
-            about: title.value,
+            title: title.value,
+            about: about.value,
             price: price.value
         })
         useRouter().push('/courses/'+result.id)
