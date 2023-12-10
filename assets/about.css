@@ -1,4 +1,4 @@
-.about {
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   background-color: #ffffff;
 }
 
-.about .component {
+.app .component {
   display: flex;
   height: 100px;
   align-items: center;
@@ -21,39 +21,36 @@
   background-color: #ffffff;
 }
 
-.about .frame {
+.app .frame {
   position: relative;
   width: 1242px;
   height: 100px;
 }
 
-.about .AREA-school {
-  position: absolute;
-  width: 133px;
+.app .AREA-school {
   height: 55px;
   top: 22px;
   left: 0;
 }
 
-.about .div {
+.app .div {
   display: flex;
   width: 819.39px;
   align-items: center;
   gap: 25px;
   padding: 34px 10px;
-  position: absolute;
   top: 0;
   left: 183px;
 }
 
-.about .view {
+.app .view {
   display: inline-flex;
   align-items: center;
   position: relative;
   flex: 0 0 auto;
 }
 
-.about .text-wrapper {
+.app .text-wrapper {
   width: fit-content;
   margin-top: -1px;
   font-family: "Roboto", Helvetica;
@@ -66,16 +63,15 @@
   line-height: normal;
 }
 
-.about .frame-2 {
+.app .frame-2 {
   display: inline-flex;
   align-items: center;
   gap: 20px;
-  position: absolute;
   top: 26px;
   left: 1052px;
 }
 
-.about .message-light-wrapper {
+.app .message-light-wrapper {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -87,7 +83,7 @@
   overflow: hidden;
 }
 
-.about .message-light {
+.app .message-light {
   position: relative;
   width: 32px;
   height: 32px;
@@ -95,7 +91,7 @@
   margin-bottom: -4px;
 }
 
-.about .div-wrapper {
+.app .div-wrapper {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -107,20 +103,25 @@
   overflow: hidden;
 }
 
-.about .text-wrapper-2 {
+.app .text-wrapper-2 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Roboto", Helvetica;
-  font-weight: 400;
   color: #000000e6;
   font-size: 24px;
+  font-family: "Roboto", Helvetica;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border: 1px solid #0000
 }
-
-.about .frame-wrapper {
+.app .text-wrapper-2:focus {
+  border: 1px solid #954fee;
+}
+.app .frame-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,7 +134,7 @@
   flex: 0 0 auto;
 }
 
-.about .frame-3 {
+.app .frame-3 {
   display: flex;
   flex-direction: column;
   width: 1242px;
@@ -144,7 +145,7 @@
   flex: 0 0 auto;
 }
 
-.about .frame-4 {
+.app .frame-4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -154,7 +155,7 @@
   flex: 0 0 auto;
 }
 
-.about .frame-5 {
+.app .frame-5 {
   display: flex;
   flex-direction: column;
   width: 820px;
@@ -164,7 +165,7 @@
   align-self: stretch;
 }
 
-.about .text-wrapper-3 {
+.app .text-wrapper-3 {
   position: relative;
   align-self: stretch;
   margin-top: -1px;
@@ -176,7 +177,7 @@
   line-height: normal;
 }
 
-.about .text-wrapper-4 {
+.app .text-wrapper-4 {
   position: relative;
   width: fit-content;
   font-family: "Roboto", Helvetica;
@@ -188,7 +189,7 @@
   white-space: nowrap;
 }
 
-.about .frame-6 {
+.app .frame-6 {
   display: flex;
   flex-wrap: wrap;
   max-height: 126px;
@@ -200,7 +201,8 @@
   width: 100%;
 }
 
-.about .frame-7 {
+.app .frame-7 {
+  user-select: none;
   display: inline-flex;
   gap: 10px;
   padding: 15px;
@@ -212,7 +214,7 @@
   position: relative;
 }
 
-.about .text-wrapper-5 {
+.app .text-wrapper-5 {
   width: fit-content;
   margin-top: -1px;
   font-family: "Roboto", Helvetica;
@@ -225,7 +227,7 @@
   line-height: normal;
 }
 
-.about .frame-8 {
+.app .frame-8 {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -235,7 +237,7 @@
   flex: 0 0 auto;
 }
 
-.about .frame-9 {
+.app .frame-9 {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -248,7 +250,8 @@
   overflow: hidden;
 }
 
-.about .frame-10 {
+.app .frame-10 {
+  user-select: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -262,7 +265,7 @@
   overflow: hidden;
 }
 
-.about .frame-11 {
+.app .frame-11 {
   display: flex;
   flex-direction: column;
   width: 401px;
@@ -272,7 +275,7 @@
   align-self: stretch;
 }
 
-.about .text-wrapper-6 {
+.app .text-wrapper-6 {
   width: fit-content;
   margin-top: -1px;
   font-family: "Roboto", Helvetica;
@@ -285,7 +288,7 @@
   line-height: normal;
 }
 
-.about .text-wrapper-7 {
+.app .text-wrapper-7 {
   align-self: stretch;
   font-family: "Roboto", Helvetica;
   font-weight: 300;
@@ -296,7 +299,7 @@
   line-height: normal;
 }
 
-.about .frame-12 {
+.app .frame-12 {
   position: relative;
   flex: 1;
   align-self: stretch;
@@ -304,7 +307,8 @@
   flex-grow: 1;
 }
 
-.about .frame-13 {
+.app .frame-13 {
+  user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -319,7 +323,7 @@
   overflow: hidden;
 }
 
-.about .frame-14 {
+.app .frame-14 {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -330,7 +334,7 @@
   overflow: hidden;
 }
 
-.about .frame-15 {
+.app .frame-15 {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -340,7 +344,7 @@
   position: relative;
 }
 
-.about .text-wrapper-8 {
+.app .text-wrapper-8 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -353,7 +357,7 @@
   white-space: nowrap;
 }
 
-.about .frame-16 {
+.app .frame-16 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -364,7 +368,7 @@
   flex: 0 0 auto;
 }
 
-.about .frame-17 {
+.app .frame-17 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -375,7 +379,7 @@
   flex: 0 0 auto;
 }
 
-.about .frame-18 {
+.app .frame-18 {
   display: flex;
   flex-direction: column;
   width: 401px;
@@ -383,7 +387,7 @@
   position: relative;
 }
 
-.about .text-wrapper-9 {
+.app .text-wrapper-9 {
   width: fit-content;
   margin-top: -1px;
   font-family: "Roboto Slab", Helvetica;
@@ -395,7 +399,7 @@
   line-height: normal;
 }
 
-.about .p {
+.app .p {
   width: 821px;
   font-family: "Roboto", Helvetica;
   font-weight: 300;
@@ -406,7 +410,7 @@
   line-height: normal;
 }
 
-.about .text-wrapper-10 {
+.app .text-wrapper-10 {
   font-weight: 300;
   position: relative;
   width: 821px;
@@ -418,7 +422,7 @@
   line-height: normal;
 }
 
-.about .div-2 {
+.app .div-2 {
   font-weight: 400;
   position: relative;
   width: 821px;
@@ -430,20 +434,20 @@
   line-height: normal;
 }
 
-.about .span {
+.app .span {
   font-weight: 300;
 }
 
-.about .text-wrapper-11 {
+.app .text-wrapper-11 {
   font-family: "Roboto", Helvetica;
 }
 
-.about .text-wrapper-12 {
+.app .text-wrapper-12 {
   font-family: "Roboto", Helvetica;
   font-weight: 700;
 }
 
-.about .frame-19 {
+.app .frame-19 {
   display: flex;
   align-items: flex-start;
   gap: 50px;
@@ -453,7 +457,7 @@
   flex: 0 0 auto;
 }
 
-.about .div-3 {
+.app .div-3 {
   flex: 1;
   align-self: stretch;
   margin-top: -1px;
@@ -466,7 +470,7 @@
   line-height: normal;
 }
 
-.about .frame-20 {
+.app .frame-20 {
   display: flex;
   flex-direction: column;
   width: 401px;
@@ -475,7 +479,7 @@
   position: relative;
 }
 
-.about .text-wrapper-13 {
+.app .text-wrapper-13 {
   align-self: stretch;
   margin-top: -1px;
   font-family: "Roboto", Helvetica;
@@ -487,13 +491,13 @@
   line-height: normal;
 }
 
-.about .frame-21 {
+.app .frame-21 {
   position: relative;
   width: 100px;
   height: 1px;
 }
 
-.about .email-wrapper {
+.app .email-wrapper {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -503,7 +507,7 @@
   flex: 0 0 auto;
 }
 
-.about .text-wrapper-14 {
+.app .text-wrapper-14 {
   font-family: "Roboto", Helvetica;
   font-weight: 300;
   color: #000000;
@@ -511,6 +515,6 @@
   letter-spacing: 0;
 }
 
-.about .text-wrapper-15 {
+.app .text-wrapper-15 {
   text-decoration: underline;
 }

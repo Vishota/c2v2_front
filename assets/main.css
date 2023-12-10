@@ -1,0 +1,26 @@
+*::selection {
+    background-color: #000c;
+    color: #fff;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 0;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 1242px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    flex: 0 0 auto;
+  }
