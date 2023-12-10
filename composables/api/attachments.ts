@@ -11,3 +11,10 @@ export const detach = new ApiAccessor<{
 }, {
     success: boolean
 }>('/attachments/detach')
+
+export const list = new ApiAccessor<{
+    course: number,
+    content: number
+}, {
+    success: boolean
+}>('/attachments/detach')
