@@ -2,7 +2,7 @@ import { api } from "./api";
 
 export default class ApiAccessor<B, R> {
     private _path: string;
-    private _ref: Ref<R & { success: boolean } | null>;
+    private _ref: Ref<R & { success?: boolean } | null>;
 
     constructor(path: string) {
         this._path = path;
@@ -14,7 +14,7 @@ export default class ApiAccessor<B, R> {
             .catch(e => console.log(this._path + ' api request error', e))
         return this._ref
     }
-    async req(body?: B): Promise<R> {
+    async req(body?: B): Promise<R & { success?: boolean }> {
         return api(this._path, body);
     }
 }

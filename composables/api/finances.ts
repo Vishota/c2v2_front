@@ -10,7 +10,7 @@ export const createWallet = new ApiAccessor<{}, {
     success: boolean
 }>('/finances/createWallet')
 
-export const depositTest = new ApiAccessor<{
+export const deposit = new ApiAccessor<{
     method: 'freemoney',
     amount: number
 }, {

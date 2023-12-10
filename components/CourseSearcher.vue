@@ -1,6 +1,5 @@
 <script setup lang=ts>
 const router = useRouter()
-const emits = defineEmits(['search'])
 const props = defineProps({
     defaultQuery: {
         type: String,
@@ -11,9 +10,8 @@ let searchQuery = ref(props.defaultQuery ? props.defaultQuery : '')
 function search() {
     const query = searchQuery.value
     if (query) router.push('/courses/search?q=' + query)
-    emits('search', query)
+    if(typeof window != 'undefined') window.location.href = '/courses/search?q=' + query
 }
-search();
 </script>
 <template>
     <div class="wrapper">
