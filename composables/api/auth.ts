@@ -4,7 +4,8 @@ export const me = new ApiAccessor<undefined, {
     isPrimeAdmin: boolean,
     isTeacher: boolean,
     isActiveTeacher: boolean,
-    isInactiveTeacher: boolean
+    isInactiveTeacher: boolean,
+    username: string
 }>('/auth/me')
 
 export const auth = new ApiAccessor<{

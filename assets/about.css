@@ -35,7 +35,7 @@
 
 .app .div {
   display: flex;
-  width: 819.39px;
+  flex-grow: 1;
   align-items: center;
   gap: 25px;
   padding: 34px 10px;
@@ -190,6 +190,7 @@
 }
 
 .app .frame-6 {
+  clip-path: content-box;
   display: flex;
   flex-wrap: wrap;
   max-height: 126px;

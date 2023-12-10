@@ -7,27 +7,13 @@ import './assets/about.css'
             <div class="text-wrapper-3">Найди свое призвание</div>
             <div class="text-wrapper-4">Например:</div>
             <div class="frame-6">
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Программирование</div>
-                </div>
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Дизайн</div>
-                </div>
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Маркетинг</div>
-                </div>
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Тестирование</div>
-                </div>
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Психология</div>
-                </div>
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Английский язык</div>
-                </div>
-                <div class="frame-7">
-                    <div class="text-wrapper-5">Бизнес-анализ</div>
-                </div>
+                <SeachSuggestion text="Программирование"/>
+                <SeachSuggestion text="Дизайн"/>
+                <SeachSuggestion text="Маркетинг"/>
+                <SeachSuggestion text="Тестирование"/>
+                <SeachSuggestion text="Психология"/>
+                <SeachSuggestion text="Английский язык"/>
+                <SeachSuggestion text="Бизнес-анализ"/>
             </div>
             <CourseSearcher />
         </div>
@@ -38,9 +24,11 @@ import './assets/about.css'
                 справедливые цены
             </p>
             <div class="frame-12"></div>
-            <div class="frame-13">
-                <div class="text-wrapper-5">Узнать больше</div>
-            </div>
+            <To to="#aboutus" style="width: 100%;">
+                <div class="frame-13">
+                    <div class="text-wrapper-5">Узнать больше</div>
+                </div>
+            </To>
         </div>
     </div>
     <div class="frame-14">
@@ -58,7 +46,7 @@ import './assets/about.css'
         </div>
     </div>
     <div class="frame-16">
-        <div class="text-wrapper-6">О нас</div>
+        <div class="text-wrapper-6" id="aboutus">О нас</div>
         <p class="text-wrapper-7">
             Мы — команда энтузиастов, страстно убежденных в том, что
             образование является ключом к успеху и развитию. Наша миссия
@@ -146,9 +134,11 @@ import './assets/about.css'
                     рассмотрим вашу кандидатуру
                 </p>
                 <div class="frame-21"></div>
-                <div class="frame-13">
-                    <div class="text-wrapper-5">Заполнить форму</div>
-                </div>
+                <To to="/teachers/apply" style="width: 100%;">
+                    <div class="frame-13">
+                        <div class="text-wrapper-5">Заполнить форму</div>
+                    </div>
+                </To>
             </div>
         </div>
     </div>

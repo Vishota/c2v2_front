@@ -21,10 +21,12 @@ export const hide = new ApiAccessor<{
 export const get = new ApiAccessor<{
     id: number
 }, {
-    id: number,
-    owner_user_id: number,
-    title: string,
-    about: string,
-    accessible: boolean,
-    price: number
+    course: {
+        id: number,
+        owner_user_id: number,
+        title: string,
+        about: string,
+        accessible: boolean,
+        price: number
+    }
 }>('/courses/get')
