@@ -18,4 +18,8 @@ export const setTeacherActive = new ApiAccessor<{
     inactive: true
 }, {
     success: boolean
-}>('/admin/ban')
+}>('/admin/setTeacherActive')
+
+export const getInactive = new ApiAccessor<{}, {
+    teachers: number[]
+}>('/admin/listInactive')
