@@ -13,8 +13,7 @@ export const detach = new ApiAccessor<{
 }>('/attachments/detach')
 
 export const list = new ApiAccessor<{
-    course: number,
-    content: number
+    course: number
 }, {
-    success: boolean
-}>('/attachments/detach')
+    attached: number[]
+}>('/attachments/list')

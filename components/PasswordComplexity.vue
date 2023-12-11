@@ -9,7 +9,7 @@ defineProps({
 <template>
     <div class="text-small" style="margin-top: 10px;">Сложность</div>
     <div class="complexity-bar">
-        <div class="complexity-scale" :style="'width: ' + Math.floor($props.complexity * 100) + '%; background: ' + ($props.complexity < .5 ? '#c63334' : $props.complexity < .75 ? '#54d277' : '#954fee')
+        <div class="complexity-scale" :style="'width: ' + Math.floor($props.complexity * 100) + '%; background: ' + ($props.complexity <= .5 ? '#c63334' : $props.complexity < .75 ? '#54d277' : '#954fee')
             "></div>
     </div>
 </template>

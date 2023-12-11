@@ -10,7 +10,9 @@ import './assets/about.css'
 			<slot></slot>
 		</div>
 		<WidthWrapper v-else>
-			<NuxtPage />
+			<ClientOnly>
+				<NuxtPage />
+			</ClientOnly>
 		</WidthWrapper>
 	</div>
 </template>

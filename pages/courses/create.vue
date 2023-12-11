@@ -17,7 +17,7 @@ async function create() {
     busy = true;
     errorMessage.value = ''
     try {
-        if (price.value < 0 || !about || !title) throw ''
+        if (price.value < 0 || !about.value || !title.value) throw ''
         const result = await courses.create.req({
             title: title.value,
             about: about.value,

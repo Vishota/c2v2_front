@@ -11,3 +11,9 @@ export const removeAccess = new ApiAccessor<{
 }, {
     success: boolean
 }>('/courseAccess/remove')
+
+export const check = new ApiAccessor<{
+    course: number
+}, {
+    access: boolean
+}>('/courseAccess/check')

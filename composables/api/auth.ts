@@ -1,4 +1,4 @@
-export const me = new ApiAccessor<undefined, {
+export const me = new ApiAccessor<{}, {
     id: number,
     isAdmin: boolean,
     isPrimeAdmin: boolean,

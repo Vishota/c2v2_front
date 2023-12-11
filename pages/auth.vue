@@ -102,7 +102,7 @@ async function login() {
                     <PasswordComplexity
                         :complexity="validation.passwordStrength(signupPassword) / (signupPassword.length >= 8 && signupPassword.length <= 32 ? 1 : 2.2)" />
                     <InputRequirement :input="signupPassword"
-                        :test="input => validation.passwordStrength(signupPassword) / (signupPassword.length >= 8 && signupPassword.length <= 32 ? 1 : 2.2) >= .5 ? 'ok' : 'bad'">
+                        :test="input => validation.passwordStrength(signupPassword) / (signupPassword.length >= 8 && signupPassword.length <= 32 ? 1 : 2.2) > .5 ? 'ok' : 'bad'">
                         Достаточная сложность
                     </InputRequirement>
                     <InputRequirement :input="signupPassword"
