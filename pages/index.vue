@@ -7,13 +7,13 @@ import './assets/about.css'
             <div class="text-wrapper-3">Найди свое призвание</div>
             <div class="text-wrapper-4">Например:</div>
             <div class="frame-6">
-                <SeachSuggestion text="Программирование"/>
-                <SeachSuggestion text="Дизайн"/>
-                <SeachSuggestion text="Маркетинг"/>
-                <SeachSuggestion text="Тестирование"/>
-                <SeachSuggestion text="Психология"/>
-                <SeachSuggestion text="Английский язык"/>
-                <SeachSuggestion text="Бизнес-анализ"/>
+                <SeachSuggestion text="Программирование" />
+                <SeachSuggestion text="Дизайн" />
+                <SeachSuggestion text="Маркетинг" />
+                <SeachSuggestion text="Тестирование" />
+                <SeachSuggestion text="Психология" />
+                <SeachSuggestion text="Английский язык" />
+                <SeachSuggestion text="Бизнес-анализ" />
             </div>
             <CourseSearcher />
         </div>
@@ -108,13 +108,9 @@ import './assets/about.css'
             </div>
             <p class="div-2">
                 <span class="span">Постоянные клиенты нашей платформы
-                    имеют&nbsp;&nbsp;возможность экономить за счет нашей программы
-                    лояльности.
+                    имеют возможность экономить за счет нашей программы
+                    лояльности и специальных предложений.
                 </span>
-                <span class="text-wrapper-11">10%</span>
-                <span class="text-wrapper-12">&nbsp;</span>
-                <span class="span">от стоимости любого приобретенного вами курса будет
-                    возвращено для оплаты дальнейшего обучения.</span>
             </p>
         </div>
     </div>

@@ -12,6 +12,7 @@ const courses = (await search.ownedBy.req({ teacherId: parseInt(useRoute().param
         <div class="text-small" style="white-space: break-spaces;">{{ info.about }}</div>
         <div class="text-medium">Курсы</div>
         <div style="display: flex; flex-direction: column; gap: 10px">
+            <div class="text-small" v-if="courses.length == 0">Пока что тут пусто</div>
             <CourseBar v-for="course in courses" :id="course" />
         </div>
     </div>

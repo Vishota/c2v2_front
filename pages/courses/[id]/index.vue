@@ -19,19 +19,26 @@ async function determineAccessType(): Promise<"admin" | "owner" | "access" | "gu
     return 'guest'
 }
 
+async function hide() {
+    if (confirm('Вы уверены, что хотите скрыть курс? Он перестанет быть общедоступным. Это действие нельзя отменить.')) {
+        await courses.hide.req({ id: courseId });
+    }
+}
+
 const accessType = await determineAccessType();
 </script>
 <template>
     <div style="display: flex; flex-direction: column; gap: 20px">
         <div class="text-big">{{ courseData.course.title }}</div>
-        <div class="text-regular" style=" margin-bottom: 20px; ">автор:<u>
+        <div class="text-regular" style=" margin-bottom: 20px; ">автор: <u>
                 <To :to="'/teachers/' + courseData.course.owner_user_id">{{ courseOwner.info.name }}</To>
             </u></div>
         <div class="text-small" style="white-space: break-spaces;">{{ courseData.course.about }}</div>
         <div style="font-family: Righteous; display: flex; gap: 10px; align-items: center">
             <div style="font-size: 56px">{{ courseData.course.price }} BYN</div>
-            <img src="/promotion.svg?url" style="align-self: stretch; position: relative; max-height: 100%; width: 41px;">
-            <div style="font-size: 36px; color: rgb(151, 71, 255); font-family: 'Russo One';">Вернём {{
+            <img v-if="false" src="/promotion.svg?url"
+                style="align-self: stretch; position: relative; max-height: 100%; width: 41px;">
+            <div v-if="false" style="font-size: 36px; color: rgb(151, 71, 255); font-family: 'Russo One';">Вернём {{
                 Math.floor(courseData.course.price / 10) }}!</div>
             <div style="flex-grow: 1;"></div>
             <div v-if="accessType == 'guest'">
@@ -39,13 +46,15 @@ const accessType = await determineAccessType();
                     <Button1 style="width: 300px;">Купить</Button1>
                 </To>
             </div>
-            <div v-else-if="accessType == 'owner'">
+            <div style="display: flex; gap: 10px" v-else-if="accessType == 'owner'">
+                <ButtonLight @click="hide">Скрыть</ButtonLight>
                 <ButtonLight>Вы преподаете</ButtonLight>
             </div>
-            <div v-else-if="accessType == 'admin'">
+            <div style="display: flex; gap: 10px" v-else-if="accessType == 'admin'">
+                <ButtonLight @click="hide">Скрыть</ButtonLight>
                 <ButtonLight>Доступ администратора</ButtonLight>
             </div>
-            <div v-else-if="accessType == 'access'">
+            <div style="display: flex; gap: 10px" v-else-if="accessType == 'access'">
                 <ButtonLight>Приобретено</ButtonLight>
             </div>
         </div>

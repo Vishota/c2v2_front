@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import * as search from '~/composables/api/search'
 let defaultQuery = useRoute().query.q as string
-let results = search.search.ref({ text: defaultQuery });
+let results = search.search.ref({ text: defaultQuery ? defaultQuery : 'и' });
 </script>
 <template>
     <div style="display: flex; gap: 10px; flex-direction: column;">
